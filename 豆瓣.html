@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		margin: 0px;
+		padding: 0px;
+		text-decoration: none;
+		list-style: none;
+	}
+		a{
+			color: #555;
+		}
+		.searchlist{
+			display: none;
+			overflow: hidden;
+			width: 490px;
+			list-style: none;
+			padding: 5px 5px 0px 5px;
+			border:1px solid #ccc;
+			border-bottom: 0px;
+			margin: -23px 175px;
+			background: #fff;
+			position: absolute;
+			z-index: 10;
+		}
+		.wrapper2 .content .searchlist a{
+			font-size: 16px;
+			font-weight: 100;
+		}
+		.searchlist li{
+			width: 500px;
+			float: left;
+			padding: 5px;
+			border-bottom:  1px solid #ccc;
+		}
+		.searchlist li img{
+			float: left;
+			height: 100px;
+			width: 80px;
+			vertical-align: text-top;
+
+		}
+		.searchlist li span{
+			float: left;	
+			word-break: normal;	
+			width: 150px;	
+			height: 100px;
+			margin-left: 25px;
+			color: #27a;
+		}
+		.searchlist li .year{
+			float: right;			
+			width: 2px;
+			height: 100px;
+			color: #666;
+		}
+		input{
+			width: 500px;
+		    height: 28px;
+		    margin-bottom: 0px;
+		}
+		.wrapper1{
+			width: 100%;
+			height: 30px;
+			background: #444444;
+			color: #ccc;
+			line-height: 30px;
+		}
+		.wrapper1 span{
+			width: 38px;
+		    float: left;
+		    font-size: 12px;
+		    margin-left: 12px;
+
+		}
+		.wrapper1 .right {
+			width: auto;			
+		    float: right;
+		    font-size: 12px;
+		    margin-right:  12px;
+
+		}
+		.wrapper2 {
+			width: 100%;
+			height: 80px;
+			background:#f0f3f5;
+			overflow: hidden;
+			border-bottom: 1px solid #e0dede;
+		}
+		.wrapper-2{		
+			position: relative;
+			margin-bottom: 50px;
+
+		}
+		.wrapper2 .content{
+			margin: 0 auto;
+			width: 1200px;
+			height: 80px;
+			line-height: 80px;
+		}
+		.wrapper2 .content a{
+			float: left;
+			text-decoration: none;
+			color: #258dcd;
+			font-weight: 900;
+			font-size: 30px;
+			margin-right:50px;
+		}
+		.wrapper2 .sub{
+			background: url('search.png') no-repeat 0 -40px;
+			width: 38px;
+			height: 33px;
+			outline: none;
+			border: 0px;
+			margin-bottom: 0px;
+			}
+		.search-wrapper a{
+			height: 96px;
+		    width: 87px;
+		    position: absolute;
+		    top: 10px;
+		    left: 45%;
+		    margin-left: 220px;
+		    background: url('port.png') no-repeat;
+		    background-size: 100%;
+		    background-color: transparent;
+		}
+
+		.wrapper3{
+			width: 100%;
+			height: 45px;
+			background:#f0f3f5;
+			overflow: hidden;
+		}
+		.wrapper3 .content{
+			margin: 0 auto;
+			width: 1200px;
+			height: 45px;
+			line-height: 38px;
+		}
+		.wrapper3 .content span{
+			
+			margin-right: 20px;
+		}
+		.wrapper3 .content span a{
+			color: #27a;
+		}
+		.wrapper-3{
+			width: 100%;
+			overflow: hidden;
+		}
+		.wrapper-3 .content{
+			margin: 0 auto;
+			width: 1200px;
+		}
+		.wrapper-3 .content1{
+			width: 810px;
+			float: left;
+		}
+		.wrapper-3 .content1 span{
+			font-size: 20px;
+			float: left;
+			color: #555;
+			margin-right: 20px;
+		}
+		.wrapper-3 .content1 a{
+			margin-right: 20px;
+			float: left;
+		}
+		.wrapper-3 .content1 div{
+			margin-left:  15px;
+			float: right;
+		}
+		.wrapper-3 .content1 .pre{
+			display: block;
+			width: 18px;
+    		height: 18px;
+			margin-left:  15px;
+			float: right;
+			background: url('switch.png') no-repeat;
+		}
+		.wrapper-3 .content1 .next{
+			display: block;
+			width: 18px;
+    		height: 18px;
+			float: right;
+			margin-left: 8px;
+			background: url('switch.png') no-repeat;
+			background-position: -18px 0;
+		}
+		.wrapper-3 .content1 .list1{
+			padding-top: 25px;
+			border-top: 1px solid #e0dede;
+			margin-top: 35px;
+
+		}
+		.wrapper-3 .content1 .list1 li{
+			float: left;
+			width: 133px;
+			margin-right:36px;
+			padding-bottom: 25px;
+			color: rgb(224, 144, 21);
+			text-align: center;
+		}
+		.wrapper-3 .content1 .list1 li:nth-of-type(5){
+			margin-right:0;
+		}
+		.wrapper-3 .content1 li img{
+			width: 100%;
+		}
+		.wrapper-3 .content1 li span{
+			margin-top: 8px;
+			display: block;
+			width: 115px;
+			text-align: center;
+			font-size: 16px;
+		}
+		.wrapper-3 .content1 li a{
+			margin-right: 0px; 
+     		float: none; 
+			margin-top: 6px;
+			display: inline-block;
+			width: 55px;
+			height: 10px;
+			background:url('star.png');
+			background-size: cover;
+		}
+		.wrapper-3 .content1 li .buy{
+			float: none;
+			margin-left: 0px;
+			display: inline-block;
+			width: 90px;
+			height: 24px;
+			background: #268dcd;
+			margin-top: 8px;
+			border-radius: 3px;
+			font-size: 14px;
+			line-height: 24px;
+			text-align: center;
+			color: #fff;
+		}
+		.gg{
+			width: 100%;
+			margin-top:50px;
+			margin-bottom: 30px;
+		}
+		.content1 a.right{
+			float: right;
+			margin-right:0px;
+			color: #27a;
+		}.content1 a:nth-of-type(1),.content1 a:nth-of-type(2){
+			color: #27a;
+		}
+		.content2{
+			float: right;
+			width: 300px;
+			font-weight: 100;
+		}
+		.content2 .answer{
+			
+			padding: 12px 18px;
+			background: #f2f7f6;
+			font-size: 16px;
+			color:  #666699;
+			margin-bottom: 30px;
+		}
+		.content2 img{
+			width: 100%;
+		}
+		.content2 .play{
+			background: #f2f7f6;
+			padding: 20px 20px;
+		    color: #072;
+		    margin-top:30px;
+		}
+		.content2 .play ul{
+			margin-top: 10px;
+		}
+		.content2 .play li{
+			color: #27a;
+			margin-top: 10px;
+		}
+		.content2 .sort{
+			font-size: 14px;
+			margin-top:30px;
+		}
+		.content2 .sort span{
+			
+			margin-left: 10px;
+			color: #27a;
+			font-weight: 100;
+			font-size: 14px;
+
+		}
+		.content2 .sort .sortlist{
+			margin-top: 15px;
+			border-top: 1px solid #eaeaea;
+		}
+		.content2 .sort .sortlist li{
+			line-height: 30px;
+			border-bottom: 1px solid #eaeaea;
+		}
+		.sort .sortlist li a{
+			font-size:12px;
+			color: #27a;
+			margin-left: 14px;
+		}
+	</style>
+</head>
+<body> 
+	<script src="./jquery.js"></script>
+	<div class="wrapper1">
+		<span>豆瓣</span>
+		<span>读书</span>
+		<span>电影</span>
+		<span>音乐</span>
+		<span>同城</span>
+		<span>小组</span>
+		<span>阅读</span>
+		<span>FM</span>
+		<span>时间</span>
+		<span>市集</span>
+		<span>更多</span>		
+		<span class="right">登录</span>
+		<span class="right">注册</span>
+		<span class="right">下载豆瓣客户端</span>
+	</div>
+	<div class='wrapper-2'>
+		<div class="wrapper2">
+			<div class="content">
+				<a href="">豆瓣电影</a>
+				<div class="search-wrapper">
+					<input type="text" id="search" ><input class="sub" type="text" value="">
+					<a href=""></a>
+				</div>
+				<ul class="searchlist">			
+				</ul>	
+			</div>
+		</div>
+		<div class="wrapper3">
+			<div class="content">
+				<span><a href="">影讯&购票</a></span>
+				<span><a href="">选电影</a></span>
+				<span><a href="">电视剧</a></span>
+				<span><a href="">排行榜</a></span>
+				<span><a href="">分类</a></span>
+				<span><a href="">影评</a></span>
+				<span><a href="">2016年度榜单</a></span>
+				<span><a href="">2017观影报告</a></span>
+			</div>
+
+		</div>
+	</div>
+	<div class='wrapper-3'>
+		<div class="content">
+			<div class="content1">
+				<span>正在热映</span><a href="">全部正在热映»</a><a href="">即将上映»</a>	
+				<i class='next'></i>
+				<i class='pre'></i>
+				<div >1/2</div>
+				<ul class="list1">
+					<li><img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2505785547.webp" alt=""><span>机器之血</span><a href=""></a>10.0
+					<div class="buy">选座购票</div></li>
+					<li><img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2506228506.webp" alt=""><span>心理罪之城...</span><a href=""></a>10.0
+					<div class="buy">选座购票</div></li>
+					<li><img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2507024497.webp" alt=""><span>妖猫传</span><a href=""></a>10.0
+					<div class="buy">选座购票</div></li>
+					<li><img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2507227732.webp" alt=""><span>芳华</span><a href=""></a>10.0
+					<div class="buy">选座购票</div></li>
+					<li><img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2507566212.webp" alt=""><span>奇门遁甲</span><a href=""></a>10.0
+					<div class="buy">选座购票</div></li>
+
+				</ul>
+				<img class="gg" src="https://img3.doubanio.com/view/dale-online/dale_ad/public/006baf8704acf7d.jpg" alt="">
+				<span>最近热门电影</span>
+				<a href="" style="color: #666">热门</a>
+				<a href="">最新</a>
+				<a href="">豆瓣高分</a>
+				<a href="">冷门佳片</a>
+				<a href="">华语</a>
+				<a href="">欧美</a>
+				<a href="">韩国</a>
+				<a href="">日本</a>
+				<a class="right" href="">更多»</a>		
+				<ul class="list1">
+					<li><img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2505785547.webp" alt=""><span>机器之血</span>10.0
+					</li>
+					<li><img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2506228506.webp" alt=""><span>心理罪之城...</span>10.0</li>
+					<li><img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2507024497.webp" alt=""><span>妖猫传</span>10.0</li>
+					<li><img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2507227732.webp" alt=""><span>芳华</span>10.0</li>
+					<li><img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2507566212.webp" alt=""><span>奇门遁甲</span>10.0</li>
+
+				</ul>
+			</div>
+			<div class="content2">
+				<div class="answer">豆瓣电影评分八问</div>
+				<img src="https://img3.doubanio.com/view/dale-online/dale_ad/public/ae7d2b565b06a2b.jpg" alt="">
+				<div class="play">
+					<h3>电影活动......</h3>
+					<ul>
+						<li>陈凯歌如何呈现盛唐唐诗的光华万丈？</li>
+						<li>一周大新闻！惊闻米老鼠吃掉了老狐狸</li>
+						<li>瓣我同行·我的豆瓣2017观影报告</li>
+					</ul>
+				</div>
+				<div class="sort">
+					<h3>本周口碑榜<span>更多榜单»</span></h3>
+					<ul class="sortlist">
+						<li>1<a href="">勇往直前</a></li>
+						<li>2<a href="">帕丁顿熊2</a></li>
+						<li>3<a href="">芳华</a></li>
+						<li>4<a href="">啊，荒野 后篇</a></li>
+						<li>5<a href="">底特律</a></li>
+						<li>6<a href="">酒会</a></li>
+						<li>7<a href="">被遗忘的孩子</a></li>
+						<li>8<a href="">太空救援</a></li>
+						<li>9<a href="">圣鹿之死</a></li>
+						<li>10<a href="">圣诞奇妙公司</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+
+		function update(argument) {
+			setInterval(function () {
+				if (search.change()) {
+					mydata={};
+					$.ajax({
+						type:'get',
+						url:('https://api.douban.com/v2/movie/search?q='+search.value),
+						dataType:'jsonp',
+						success:function (data) {
+							console.log(data)
+							mydata=data;
+							document.getElementsByClassName('searchlist')[0].innerHTML='<a href=""><li></li></a><a href=""><li></li></a><a href=""><li></li></a><a href=""><li></li></a><a href=""><li></li></a>'
+							init();
+						},
+						error:function (argument) {
+							console.log(search.value);
+						}
+						
+					})
+
+				}
+					
+					
+			},500)
+		}
+		update();
+		Object.prototype.change = function() {
+		if (this.value!='') {
+			if (!this.lastvalue) {
+				this.lastvalue=this.value;
+				return true;
+			}else if(this.lastvalue!=this.value){
+				this.lastvalue=this.value;
+				return true;
+			
+			}else{
+				this.lastvalue=this.value;
+				return false;
+			}
+		}
+		};
+		function init(argument) {
+			var lilist=document.getElementsByClassName('searchlist')[0].getElementsByTagName('li');
+			var lia=document.getElementsByClassName('searchlist')[0].getElementsByTagName('a');
+			document.getElementsByClassName('searchlist')[0].style.display='block';
+			for (var i = 0;i<5;i++) {
+				var img=document.createElement('img');
+				var span=document.createElement('span');
+				var span2=document.createElement('span');
+				span.innerText=mydata.subjects[i].title;
+				span2.innerText=mydata.subjects[i].year;
+				span2.className='year';
+				img.src=mydata.subjects[i].images.small;
+				span.appendChild(span2);
+				lilist[i].appendChild(img);
+				lilist[i].appendChild(span);
+				lia[i].href=mydata.subjects[i].alt;
+			}
+		}
+			
+			
+		
+		search.onblur=function(){
+			if (this.value!='') {
+			setTimeout(function () {
+					document.getElementsByClassName('searchlist')[0].innerHTML='<a href=""><li></li></a><a href=""><li></li></a><a href=""><li></li></a><a href=""><li></li></a><a href=""><li></li></a>';
+					document.getElementsByClassName('searchlist')[0].style.display='none';
+				},500);
+			}else{
+				document.getElementsByClassName('searchlist')[0].style.display='none';
+				document.getElementsByClassName('searchlist')[0].innerHTML='<a href=""><li></li></a><a href=""><li></li></a><a href=""><li></li></a><a href=""><li></li></a><a href=""><li></li></a>';
+
+			}
+			
+			
+		}
+		
+	</script>
+
+</body>
+</html>
